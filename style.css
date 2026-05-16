@@ -1,0 +1,138 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    color:white;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.search-box{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.search-box h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.search-box p{
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.input-box{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+input{
+    width:320px;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:16px;
+}
+
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:12px;
+    background:#ff4b2b;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff1e00;
+    transform:scale(1.05);
+}
+
+#movieBox{
+    margin-top:30px;
+}
+
+.movie-card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    gap:25px;
+    align-items:center;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    animation:fadeIn 0.6s ease;
+}
+
+.movie-card img{
+    width:250px;
+    border-radius:15px;
+}
+
+.movie-info h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.movie-info p{
+    margin:10px 0;
+    color:#f1f1f1;
+    line-height:1.6;
+}
+
+.rating{
+    color:gold;
+    font-weight:600;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .movie-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .movie-card img{
+        width:200px;
+    }
+
+    .search-box h1{
+        font-size:30px;
+    }
+}
